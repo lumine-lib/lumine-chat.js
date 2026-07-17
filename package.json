@@ -1,0 +1,39 @@
+{
+  "name": "lumine-chat",
+  "version": "26.7.17-dev",
+  "description": "Connect your program to chat Platform",
+  "license": "ISC",
+  "author": "Lumine-lib",
+  "type": "commonjs",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "rimraf dist && tsc -p tsconfig.build.json",
+    "clean": "rimraf dist",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "prepare": "npm run build"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "axios": "^1.18.1",
+    "ws": "^8.21.1",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9",
+    "@types/node": "^24.13.3",
+    "@types/ws": "^8",
+    "eslint": "^9",
+    "rimraf": "^6",
+    "tsx": "^4",
+    "typescript": "^5.9",
+    "typescript-eslint": "^8"
+  }
+}
