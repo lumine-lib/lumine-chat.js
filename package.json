@@ -3,7 +3,6 @@
   "version": "26.7.18-dev",
   "description": "Connect your program to chat Platform",
   "author": "Lumine-lib",
-  "type": "commonjs",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
