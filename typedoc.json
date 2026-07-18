@@ -9,6 +9,6 @@
         "typedoc-plugin-markdown"
     ],
     "readme": "README.md",
-    "name": "Lumine Chat",
-    "includeVersion": true
+    "name": "Lumine Chat.js",
+    "includeVersion": false
 }
