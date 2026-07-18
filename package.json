@@ -40,7 +40,7 @@
     "prepare": "npm run build",
     "docs:api": "typedoc",
     "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
+    "docs:build": "npm run docs:api && vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
   "engines": {
