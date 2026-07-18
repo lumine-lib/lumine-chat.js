@@ -1,6 +1,9 @@
+import { WebSocket } from "ws";
 import BaseClient from "./Client";
 
 export default class WebsocketClient extends BaseClient {
+    protected wssurl?: string | null
+
     ws?: WebSocket | null
     connect(token: string) {
         // Validate if token is anvailable and is string
@@ -15,10 +18,14 @@ export default class WebsocketClient extends BaseClient {
         }
 
         // Save token
-        this.__token = token
+        this.token = token
 
         // Start intialize
-        this.__intialize()
+        this.intialize()
+    }
+
+    protected intialize() {
+        console.log("Default intialize of WebsocketClient")
     }
 
     disconnect() {
@@ -26,7 +33,10 @@ export default class WebsocketClient extends BaseClient {
         this.ws = null
     }
 
-    __intialize() {
-
+    sendWs(data: any) {
+        if(!this.ws) throw Error("Client is disconnected")
+        this.ws?.send(data, (err) => {
+            throw Error("Send WS Error: " + err)
+        })
     }
 }
