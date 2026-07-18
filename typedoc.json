@@ -2,7 +2,6 @@
     "entryPoints": [
         "./src/packages/core/index.ts",
         "./src/packages/discord/index.ts",
-        "./src/packages/telegram/index.ts"
     ],
     "out": "docs/api",
     "tsconfig": "tsconfig.build.json",
