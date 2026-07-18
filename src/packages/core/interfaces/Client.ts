@@ -2,10 +2,6 @@ import { AxiosResponse } from "axios";
 import EventEmitter from "node:events";
 
 export default interface Client extends EventEmitter {
-    __token: string | null
-    __baseUrl: string
-    __headers: any
-
     isConnected: boolean
 
     //Method
