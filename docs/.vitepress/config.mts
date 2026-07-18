@@ -7,7 +7,7 @@ export default defineConfig({
     nav: [
       { text: 'Panduan', link: '/guide/getting-started' },
       { text: 'API', link: '/api/index' },
-      { text: 'GitHub', link: 'https://github.com/lumine-lib/lumine-chat' }
+      { text: 'GitHub', link: 'https://github.com/lumine-lib/lumine-chat.js' }
     ],
     sidebar: {
       '/guide/': [

@@ -1,5 +1,5 @@
 {
-  "name": "lumine-chat",
+  "name": "lumine-chat.js",
   "version": "26.7.18-dev",
   "description": "Connect your program to chat Platform",
   "author": "Lumine-lib",
@@ -39,7 +39,7 @@
     "prepare": "npm run build",
     "docs:api": "typedoc",
     "docs:dev": "vitepress dev docs",
-    "docs:build": "npm run docs:api && vitepress build docs",
+    "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
   "engines": {

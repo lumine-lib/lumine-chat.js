@@ -28,6 +28,8 @@ jobs:
 
       - run: npm ci
 
+      - run: npm run docs:api
+
       - run: npm run docs:build
 
       - uses: actions/upload-pages-artifact@v3
