@@ -1,8 +1,7 @@
 {
   "name": "lumine-chat",
-  "version": "26.7.17-dev",
+  "version": "26.7.18-dev",
   "description": "Connect your program to chat Platform",
-  "license": "ISC",
   "author": "Lumine-lib",
   "type": "commonjs",
   "main": "./dist/index.js",
@@ -10,13 +9,39 @@
   "files": [
     "dist"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./core": {
+      "import": "./dist/packages/core/index.js",
+      "require": "./dist/packages/core/index.js",
+      "types": "./dist/packages/core/index.d.ts"
+    },
+    "./discord": {
+      "import": "./dist/packages/discord/index.js",
+      "require": "./dist/packages/discord/index.js",
+      "types": "./dist/packages/discord/index.d.ts"
+    },
+    "./telegram": {
+      "import": "./dist/packages/telegram/index.js",
+      "require": "./dist/packages/telegram/index.js",
+      "types": "./dist/packages/telegram/index.d.ts"
+    }
+  },
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "build": "rimraf dist && tsc -p tsconfig.build.json",
     "clean": "rimraf dist",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "docs:api": "typedoc",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "engines": {
     "node": ">=20"
@@ -33,7 +58,10 @@
     "eslint": "^9",
     "rimraf": "^6",
     "tsx": "^4",
+    "typedoc": "^0.28.20",
+    "typedoc-plugin-markdown": "^4.12.0",
     "typescript": "^5.9",
-    "typescript-eslint": "^8"
+    "typescript-eslint": "^8",
+    "vitepress": "^1.6.4"
   }
 }

@@ -14,7 +14,12 @@
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
     "noImplicitOverride": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "paths": {
+      "lumine-chat/core": ["./packages/core/index.ts"],
+      "lumine-chat/discord": ["./packages/discord/index.ts"],
+      "lumine-chat/telegram": ["./packages/telegram/index.ts"]
+    }
   },
   "include": [
     "src"
