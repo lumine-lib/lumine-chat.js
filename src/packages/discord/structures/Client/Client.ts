@@ -62,13 +62,18 @@ export default class Client extends WebsocketClient {
                 switch (packet.op) {
                     case OPCodes.HELLO:
                         if (packet.s) sequence = packet.s;
-                        setInterval(() => this.sendWs({op: OPCodes.HEARTBEAT, d: sequence}), packet.d.heartbeat_interval - 3000);
-                        this.sendWs({op: OPCodes.IDENTIFY, d: botoption});
+                        setInterval(() => this.dsendWs(OPCodes.HEARTBEAT, sequence), packet.d.heartbeat_interval - 3000);
+                        this.dsendWs(OPCodes.IDENTIFY, botoption);
                 }
 
                 if (!packet?.t) return;
                 this.emit('rawEvent', { t: packet.t, d: packet.d })
             }
         }
+    }
+
+    protected dsendWs(op: OPCodes, d: any) {
+        let obj = JSON.stringify({op, d})
+        this.sendWs(obj)
     }
 }
