@@ -1,6 +1,6 @@
 import BaseClient from "./Client";
 
-export default class Client extends BaseClient {
+export default class PollingClient extends BaseClient {
     poll?: any | null
     connect(token: string) {
         // Validate if token is anvailable and is string
