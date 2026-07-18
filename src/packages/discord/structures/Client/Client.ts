@@ -12,7 +12,7 @@ export default class Client extends WebsocketClient {
 
     constructor(DiscordClientOption: { token?: string }) {
         super()
-        if (DiscordClientOption.token) this.token = DiscordClientOption.token
+        if (DiscordClientOption?.token) this.token = DiscordClientOption.token
     }
 
     protected override intialize(): void {
