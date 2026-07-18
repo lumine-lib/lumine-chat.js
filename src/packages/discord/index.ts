@@ -1,5 +1,3 @@
-import Client from "./structures/Client/Client";
+export * from "./structures/Client/Client";
 
-export {
-    Client
-}
+export * from "./utils/Intent"
