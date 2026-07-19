@@ -35,8 +35,6 @@ export default class WebsocketClient extends BaseClient {
 
     sendWs(data: any) {
         if(!this.ws) throw Error("Client is disconnected")
-        this.ws?.send(data, (err) => {
-            throw Error("Send WS Error: " + err)
-        })
+        return this.ws.send(data)
     }
 }
