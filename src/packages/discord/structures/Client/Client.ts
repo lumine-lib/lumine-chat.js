@@ -31,6 +31,7 @@ export default class Client extends WebsocketClient {
         // Check if ws url is already set or not
         if (!this.nowWsUrl) {
             this.ws = new WebSocket(this.wssurl);
+            
             this.nowWsUrl = this.wssurl
         }
 
@@ -45,6 +46,7 @@ export default class Client extends WebsocketClient {
             }
         } else {
             this.ws.onopen = () => {
+                console.log("Lumine-chat.js: Discord is connected")
             }
         }
 
