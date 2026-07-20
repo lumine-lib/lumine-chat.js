@@ -6,9 +6,13 @@
     "out": "docs/api",
     "tsconfig": "tsconfig.build.json",
     "plugin": [
-        "typedoc-plugin-markdown"
+        "typedoc-plugin-markdown",
+        "typedoc-vitepress-theme"
     ],
-    "readme": "README.md",
+    "readme": "none",
     "name": "Lumine Chat.js",
+    "indexFormat": "table",
+    "useCodeBlocks": true,
+    "disableSources": true,
     "includeVersion": false
 }
