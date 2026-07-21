@@ -5,8 +5,8 @@ import WebsocketClient from "../../../core/structures/client/WebsocketClient";
 // Enums / Interface / Types
 import { OPCodes } from "../../enums/DiscordGateway";
 export default class Client extends WebsocketClient {
-    protected override wssurl: string = "wss://gateway.discord.gg/?v=10&encoding=json";
     protected override headers: any = {}
+    protected wssurl: string = "wss://gateway.discord.gg/?v=10&encoding=json";
     protected intents: number = 0
     private nowWsUrl?: string | null = null
 
@@ -16,7 +16,6 @@ export default class Client extends WebsocketClient {
     }
 
     protected override intialize(): void {
-
         let botoption = {
             token: this.token,
             properties: {
