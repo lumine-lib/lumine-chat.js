@@ -2,8 +2,6 @@ import { WebSocket } from "ws";
 import BaseClient from "./Client";
 
 export default class WebsocketClient extends BaseClient {
-    protected wssurl?: string | null
-
     ws?: WebSocket | null
     connect(token: string) {
         // Validate if token is anvailable and is string
