@@ -16,6 +16,7 @@
     "noImplicitOverride": true,
     "sourceMap": true,
     "paths": {
+      "lumine-chat": ["./index.ts"],
       "lumine-chat/core": ["./packages/core/index.ts"],
       "lumine-chat/discord": ["./packages/discord/index.ts"],
       "lumine-chat/telegram": ["./packages/telegram/index.ts"]
