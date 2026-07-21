@@ -6,7 +6,7 @@ export default class Client extends EventEmitter {
     protected headers: any
     isConnected: boolean = false
 
-    async request(method: "GET" | "POST" | "PATCH" | "DELETE", params: string, data: any, headers: any = {}): Promise<AxiosResponse> {
+    async request(method: "GET" | "POST" | "PATCH" | "DELETE", params: string, data: any = {}, headers: any = {}): Promise<AxiosResponse> {
         let object: AxiosRequestConfig = {
             method: method,
             baseURL: this.baseUrl + params,
