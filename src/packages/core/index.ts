@@ -1,3 +1,5 @@
+
+
 // Structures
 export * from './structures/client/Client';
 export * from './structures/client/PolingClient';
@@ -7,3 +9,6 @@ export * from './structures/client/WebsocketClient';
 export * from './interfaces/Client';
 export * from './interfaces/PollingClient';
 export * from './interfaces/WebsocketClient';
+
+// Utils
+export { Collection } from './utils/Collection';
