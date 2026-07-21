@@ -1,7 +1,7 @@
 # Lumine Chat
 Lumine chat is Simple Library to Connect your app in your favorite chat platform
 
-[Guide](lumine-chatjs.intacent.my.id) | [API Reference](lumine-chatjs.intacent.my.id/api) | [Package Documentation](lumine-chatjs.intacent.my.id/api/modules)
+[Guide](https://lumine-chatjs.intacent.my.id) | [API Reference](https://lumine-chatjs.intacent.my.id/api) | [Package Documentation](https://lumine-chatjs.intacent.my.id/api/modules)
 
 ## Feature
 - Simple chat bot feature support
@@ -21,3 +21,10 @@ const dcc = new DiscordClient({ // Declare discord bot client
 
 dcc.login(process.env.token) // Input your bot token here
 ```
+
+## TODO
+- [ ] Discord
+- [ ] Telegram
+- [ ] Stoat
+- [ ] Valour
+- [ ] Mikoto.io
